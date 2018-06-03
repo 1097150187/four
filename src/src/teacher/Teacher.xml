@@ -7,5 +7,8 @@
      <select id="findByTid" parameterType="java.lang.String" resultType="Teacher">
      select * from teacher where tid = #{0}
      </select>
-     
+      <insert id="add" parameterType="Teacher">    
+        insert into teacher(tid,tname)   
+        values(#{tid},#{tname})    
+    </insert>
  </mapper>

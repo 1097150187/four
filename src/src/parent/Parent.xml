@@ -7,5 +7,8 @@
      <select id="findByPid" parameterType="java.lang.String" resultType="Parent">
      select * from parent where pid = #{0}
      </select>
-     
+      <insert id="add" parameterType="Parent">    
+        insert into parent(pid,sid,pname)   
+        values(#{pid},#{sid},#{pname})    
+    </insert>
  </mapper>
